@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  lightrag:
+    build: .
+    container_name: lightrag-app
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - RAG_STORAGE_DIR=/app/rag_storage
+      - DATA_DIR=/app/data
+    volumes:
+      # Persist the knowledge graph between container restarts
+      - ./rag_storage:/app/rag_storage
+      # Persist ingested documents
+      - ./data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s

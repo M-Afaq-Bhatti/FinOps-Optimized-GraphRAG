@@ -1,0 +1,18 @@
+[project]
+name = "lightrag-project"
+version = "1.0.0"
+description = "FinOps-Optimized GraphRAG — LightRAG + Gemini 2.5 Flash"
+requires-python = ">=3.10"
+dependencies = [
+    "lightrag-hku==1.4.15",
+    "google-genai",
+    "python-dotenv",
+    "fastapi",
+    "uvicorn[standard]",
+    "python-multipart",
+    "openai",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
