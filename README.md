@@ -1,7 +1,7 @@
 # LightRAG — FinOps-Optimized GraphRAG Engine
 
 > **GraphRAG at 1/6000th the cost of Microsoft's implementation**
-> LightRAG + Gemini 2.5 Flash + NanoVectorDB · No external database · Fully portable
+> LightRAG + Gemini 2.5 Flash + NanoVectorDB · No external database · Fully portable ( Live LINK : http://54.173.55.110:8000/)
 
 ![Stack](https://img.shields.io/badge/Stack-LightRAG%20%7C%20Gemini%202.5%20Flash%20%7C%20FastAPI%20%7C%20React-blueviolet)
 ![Deploy](https://img.shields.io/badge/Deploy-AWS%20EC2%20t3.micro-orange)
@@ -248,4 +248,5 @@ curl -X POST http://localhost:8000/api/query \
 | **LightRAG (this project)** | **~$0.002** |
 
 > 6000x cheaper. Same graph-based retrieval quality.
+
 
