@@ -1,5 +1,6 @@
 # Secrets
 .env
+.env.example
 
 # LightRAG knowledge graph (large, rebuild from docs)
 rag_storage/
